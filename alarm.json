@@ -1,0 +1,58 @@
+[
+  {
+    "key": "user_xx",
+    "value": "123"
+  },
+  {
+    "key": "user_info.domain_id",
+    "value": "6a16b53ddfaa4497924d46b245bb07a7"
+  },
+  {
+    "key": "user_info.name",
+    "value": "cspm-user"
+  },
+  {
+    "key": "user_info.links.previous",
+    "value": ""
+  },
+  {
+    "key": "user_info.links.next",
+    "value": ""
+  },
+  {
+    "key": "user_info.links.self",
+    "value": "https://iam.cn-east-3.myhuaweicloud.com/v3/users/98c9516cd71746fca1c786560b4cc988"
+  },
+  {
+    "key": "user_info.password_expires_at",
+    "value": ""
+  },
+  {
+    "key": "user_info.id",
+    "value": "98c9516cd71746fca1c786560b4cc988"
+  },
+  {
+    "key": "user_info.enabled",
+    "value": true
+  },
+  {
+    "key": "user_detail.pwd_strength",
+    "value": "Strong"
+  },
+  {
+    "key": "user_detail.create_time",
+    "value": "2023-04-24 02:57:17.0"
+  },
+  {
+    "key": "user_detail.last_login_time",
+    "value": "2023-05-05 11:50:10"
+  },
+  {
+    "key": "user_detail.links.self",
+    "value": "https://iam.cn-east-3.myhuaweicloud.com/v3/users/98c9516cd71746fca1c786560b4cc988"
+  },
+  {
+    "key": "mfa_device",
+    "value": []
+  }
+]

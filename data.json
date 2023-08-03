@@ -1,0 +1,236 @@
+{
+  "user_info": {
+    "domain_id": "6a16b53ddfaa4497924d46b245bb07a7",
+    "name": "cspm-user",
+    "links": {
+      "next": "",
+      "previous": "",
+      "self": "https://iam.cn-east-3.myhuaweicloud.com/v3/users/98c9516cd71746fca1c786560b4cc988"
+    },
+    "password_expires_at": "",
+    "id": "98c9516cd71746fca1c786560b4cc988",
+    "enabled": true
+  },
+  "user_detail": {
+    "pwd_strength": "Strong",
+    "create_time": "2023-04-24 02:57:17.0",
+    "last_login_time": "2023-05-05 11:50:10",
+    "description": "",
+    "access_mode": "default",
+    "areacode": "",
+    "enabled": true,
+    "domain_id": "6a16b53ddfaa4497924d46b245bb07a7",
+    "pwd_status": false,
+    "xuser_id": "",
+    "update_time": "2023-04-24 03:02:47.0",
+    "phone": "-",
+    "is_domain_owner": false,
+    "name": "cspm-user",
+    "links": {
+      "next": "",
+      "previous": "",
+      "self": "https://iam.cn-east-3.myhuaweicloud.com/v3.0/OS-USER/users/98c9516cd71746fca1c786560b4cc988"
+    },
+    "id": "98c9516cd71746fca1c786560b4cc988",
+    "xuser_type": "",
+    "email": "zengxianhui@moresec.cn"
+  },
+  "policy_role_list": [
+    {
+      "flag": "fine_grained",
+      "description_cn": "弹性云服务器所有权限",
+      "catalog": "ECS",
+      "name": "system_all_3",
+      "description": "All permissions of ECS service.",
+      "links": {
+        "next": "",
+        "previous": "",
+        "self": "https://iam.cn-east-3.myhuaweicloud.com/v3/roles/2180cfd27e9741d5857dda9adcfa85c1"
+      },
+      "id": "2180cfd27e9741d5857dda9adcfa85c1",
+      "display_name": "ECS FullAccess",
+      "type": "XA",
+      "policy": {
+        "Version": "1.1",
+        "Statement": [
+          {
+            "Action": [
+              "ecs:*:*",
+              "evs:*:get",
+              "evs:*:list",
+              "evs:volumes:create",
+              "evs:volumes:delete",
+              "evs:volumes:attach",
+              "evs:volumes:detach",
+              "evs:volumes:manage",
+              "evs:volumes:update",
+              "evs:volumes:use",
+              "evs:volumes:uploadImage",
+              "evs:snapshots:create",
+              "vpc:*:get",
+              "vpc:*:list",
+              "vpc:networks:create",
+              "vpc:networks:update",
+              "vpc:subnets:update",
+              "vpc:subnets:create",
+              "vpc:ports:*",
+              "vpc:routers:get",
+              "vpc:routers:update",
+              "vpc:securityGroups:*",
+              "vpc:securityGroupRules:*",
+              "vpc:floatingIps:*",
+              "vpc:publicIps:*",
+              "ims:images:create",
+              "ims:images:delete",
+              "ims:images:get",
+              "ims:images:list",
+              "ims:images:update",
+              "ims:images:upload"
+            ],
+            "Effect": "Allow"
+          }
+        ]
+      }
+    },
+    {
+      "flag": "fine_grained",
+      "description_cn": "统一身份认证服务的只读权限。",
+      "catalog": "IAM",
+      "name": "system_all_106",
+      "description": "Read-only permissions for Identity and Access Management.",
+      "links": {
+        "next": "",
+        "previous": "",
+        "self": "https://iam.cn-east-3.myhuaweicloud.com/v3/roles/5b5788508363442199a53472153d97d0"
+      },
+      "id": "5b5788508363442199a53472153d97d0",
+      "display_name": "IAM ReadOnlyAccess",
+      "type": "AX",
+      "policy": {
+        "Version": "1.1",
+        "Statement": [
+          {
+            "Action": [
+              "iam:*:get*",
+              "iam:*:list*",
+              "iam:*:check*"
+            ],
+            "Effect": "Allow"
+          }
+        ]
+      }
+    },
+    {
+      "flag": "fine_grained",
+      "description_cn": "对象存储服务管理员",
+      "catalog": "OBS",
+      "name": "system_all_159",
+      "description": "Object Storage Service Administrator",
+      "links": {
+        "next": "",
+        "previous": "",
+        "self": "https://iam.cn-east-3.myhuaweicloud.com/v3/roles/8eb36151949e434e857a3446e58cf107"
+      },
+      "id": "8eb36151949e434e857a3446e58cf107",
+      "display_name": "OBS Administrator",
+      "type": "AX",
+      "policy": {
+        "Version": "1.1",
+        "Statement": [
+          {
+            "Action": [
+              "obs:*:*"
+            ],
+            "Effect": "Allow"
+          }
+        ]
+      }
+    },
+    {
+      "description_cn": "全部云服务只读权限(除IAM权限)",
+      "catalog": "BASE",
+      "name": "readonly",
+      "description": "Tenant Guest (Exclude IAM)",
+      "links": {
+        "next": "",
+        "previous": "",
+        "self": "https://iam.cn-east-3.myhuaweicloud.com/v3/roles/c40fc1b70fb14140a61ac60c7c292874"
+      },
+      "id": "c40fc1b70fb14140a61ac60c7c292874",
+      "display_name": "Tenant Guest",
+      "type": "AA",
+      "policy": {
+        "Version": "1.1",
+        "Statement": [
+          {
+            "Action": [
+              "obs:*:get*",
+              "obs:*:list*",
+              "obs:*:head*"
+            ],
+            "Effect": "Allow"
+          },
+          {
+            "Condition": {
+              "StringNotEqualsIgnoreCase": {
+                "g:ServiceName": [
+                  "iam"
+                ]
+              }
+            },
+            "Action": [
+              "*:*:get*",
+              "*:*:list*",
+              "*:*:head*",
+              "*:*:display*",
+              "*:*:query*",
+              "*:*:show*"
+            ],
+            "Effect": "Allow"
+          }
+        ]
+      }
+    }
+  ],
+  "mfa_device": [],
+  "access_keys": [
+    {
+      "access": "5ECRPAFRULJBFGJAPTEK",
+      "create_time": "2023-04-24T03:10:55.207000Z",
+      "user_id": "98c9516cd71746fca1c786560b4cc988",
+      "description": "常驻ak",
+      "status": "active"
+    },
+    {
+      "access": "SALOG0ZBBYM0I9QUUSRL",
+      "create_time": "2023-04-28T01:23:43.656000Z",
+      "user_id": "98c9516cd71746fca1c786560b4cc988",
+      "description": "214",
+      "status": "active"
+    }
+  ],
+  "user_groups": [
+    {
+      "user_group_info": {
+        "domain_id": "6a16b53ddfaa4497924d46b245bb07a7",
+        "create_time": 1682304712996,
+        "name": "cspm-product-group",
+        "description": "宵明用户组",
+        "links": {
+          "next": "",
+          "previous": "",
+          "self": "https://iam.cn-east-3.myhuaweicloud.com/v3/groups/1cd4ffb292d644f694330b614e5d9018"
+        },
+        "id": "1cd4ffb292d644f694330b614e5d9018"
+      },
+      "all_project_permissions": null,
+      "domain_permissions": {
+        "name": "",
+        "id": "",
+        "type": "",
+        "policy": null
+      }
+    }
+  ],
+  "user_xx": "123"
+}
